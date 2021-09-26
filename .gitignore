@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/dockerclear.bat
+/src/Services/Basket/Basket.API/WeatherForecast.cs
+/src/Services/Basket/Basket.API/Controllers/WeatherForecastController.cs
