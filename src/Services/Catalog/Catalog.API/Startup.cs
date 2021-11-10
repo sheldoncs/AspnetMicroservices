@@ -63,6 +63,8 @@ namespace Catalog.API
            
             
             var str = mongoDatabaseConfiguration.ToConnectionString();
+            
+            
             services.AddScoped<IMongoClient, MongoClient>(sp => new MongoClient(mongoDatabaseConfiguration.ToConnectionString()));
             services.AddScoped<ICatalogContext, CatalogContext>();
         }
