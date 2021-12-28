@@ -34,19 +34,19 @@ namespace Discount.Grpc.Extensions
                         Connection = connection
                     };
 
-                    command.CommandText = "DROP TABLE IF EXISTS Coupon";
+                    command.CommandText = "DROP TABLE IF EXISTS Coupons";
                     command.ExecuteNonQuery();
 
-                    command.CommandText = @"CREATE TABLE Coupon(Id SERIAL PRIMARY KEY, 
+                    command.CommandText = @"CREATE TABLE Coupons(Id SERIAL PRIMARY KEY, 
                                                                 ProductName VARCHAR(24) NOT NULL,
                                                                 Description TEXT,
                                                                 Amount INT)";
                     command.ExecuteNonQuery();
 
-                    command.CommandText = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('IPhone X', 'IPhone Discount', 150);";
+                    command.CommandText = "INSERT INTO Coupons(ProductName, Description, Amount) VALUES('IPhone X', 'IPhone Discount', 150);";
                     command.ExecuteNonQuery();
 
-                    command.CommandText = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('Samsung 10', 'Samsung Discount', 100);";
+                    command.CommandText = "INSERT INTO Coupons(ProductName, Description, Amount) VALUES('Samsung 10', 'Samsung Discount', 100);";
                     command.ExecuteNonQuery();
 
                     logger.LogInformation("Migrated postresql database.");
